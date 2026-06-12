@@ -1,7 +1,6 @@
 import pandas as pd
 import psycopg2
 
-# Connect to PostgreSQL
 conn = psycopg2.connect(
     database="covid_db",
     user="postgres",
@@ -10,10 +9,8 @@ conn = psycopg2.connect(
     port="5432"
 )
 
-# Read transformed CSV file
 df = pd.read_csv("transformed_covid_data.csv")
 
-# Create cursor
 cur = conn.cursor()
 for _, row in df.iterrows():
 
