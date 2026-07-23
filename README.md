@@ -15,3 +15,20 @@ API → Extract → Transform → PostgreSQL
 * Results:
 - Processed and loaded 232+ country records into PostgreSQL.
 - Implemented an end-to-end ETL workflow.
+
+
+ * Project Architecture
+
+         COVID-19 API
+               │
+               ▼
+      Extract (Python)
+               │
+               ▼
+    Transform (Pandas)
+               │
+               ▼
+   PostgreSQL Database
+               │
+               ▼
+     Reports / Analysis
